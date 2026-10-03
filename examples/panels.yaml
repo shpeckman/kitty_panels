@@ -1,0 +1,20 @@
+# examples/panels.yaml
+panels:
+  dropdown:
+    mode: dropdown
+    edge: top
+    lines: "40"
+    layer: overlay
+    focus_policy: exclusive
+    hide_on_focus_loss: true
+    kitty_overrides:
+      background_opacity: "0.85"
+    cmd: [/bin/bash, -l]
+
+  statusbar:
+    mode: dock
+    edge: bottom
+    lines: "2"
+    focus_policy: not-allowed
+    exclusive_zone: -1
+    cmd: [/bin/sh, -c, "while true; do date; sleep 5; done"]
